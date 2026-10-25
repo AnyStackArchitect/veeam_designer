@@ -107,15 +107,15 @@ jobs:
 
           tags=(
             "emb079/veeam-designer:latest"
-            "ghcr.io/eblackrps/veeam-designer:latest"
+            "ghcr.io/anystackarchitect/veeam-designer:latest"
             "emb079/veeam-designer:${package_version}"
-            "ghcr.io/eblackrps/veeam-designer:${package_version}"
+            "ghcr.io/anystackarchitect/veeam-designer:${package_version}"
           )
 
           if [[ "${GITHUB_REF_TYPE}" == "tag" ]]; then
             tags+=(
               "emb079/veeam-designer:${GITHUB_REF_NAME}"
-              "ghcr.io/eblackrps/veeam-designer:${GITHUB_REF_NAME}"
+              "ghcr.io/anystackarchitect/veeam-designer:${GITHUB_REF_NAME}"
             )
           fi
 

@@ -7,7 +7,7 @@ and GitHub Pages edition share the same packaged sizing engine and web interface
 
 The public browser edition is published from `main`:
 
-https://eblackrps.github.io/veeam_designer/
+https://anystackarchitect.github.io/veeam_designer/
 
 Build the static site locally with:
 
@@ -40,10 +40,10 @@ the exact stable release image, and binds only to loopback. Change the host-side
 deliberately if the service must be reachable from other systems, and place it behind the
 environment's normal reverse proxy, TLS, and access controls.
 
-The same release is published to GitHub Container Registry:
+The Docker workflow also targets GitHub Container Registry:
 
 ```text
-ghcr.io/eblackrps/veeam-designer:5.0.0
+ghcr.io/anystackarchitect/veeam-designer:5.0.0
 ```
 
 For production, prefer an explicit version tag over `latest`. Published container images include

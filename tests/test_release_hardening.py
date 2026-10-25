@@ -19,7 +19,9 @@ def test_container_base_and_compose_image_are_immutable_or_versioned() -> None:
     dockerfile = (ROOT / "Dockerfile").read_text(encoding="utf-8")
     compose = (ROOT / "docker-compose.yml").read_text(encoding="utf-8")
 
-    assert dockerfile.startswith("FROM python:3.12.14-slim@sha256:")
+    assert re.fullmatch(
+        r"FROM python:3\.12\.15-slim@sha256:[0-9a-f]{64}", dockerfile.splitlines()[0]
+    )
     assert "USER 10001:10001" in dockerfile
     assert "HEALTHCHECK" in dockerfile
     assert "emb079/veeam-designer:5.0.0" in compose
