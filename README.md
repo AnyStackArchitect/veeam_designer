@@ -1,13 +1,13 @@
 # Veeam Designer
 
-[![CI](https://github.com/eblackrps/veeam_designer/actions/workflows/ci.yml/badge.svg)](https://github.com/eblackrps/veeam_designer/actions/workflows/ci.yml)
-[![Pages](https://github.com/eblackrps/veeam_designer/actions/workflows/pages.yml/badge.svg)](https://github.com/eblackrps/veeam_designer/actions/workflows/pages.yml)
+[![CI](https://github.com/AnyStackArchitect/veeam_designer/actions/workflows/ci.yml/badge.svg)](https://github.com/AnyStackArchitect/veeam_designer/actions/workflows/ci.yml)
+[![Pages](https://github.com/AnyStackArchitect/veeam_designer/actions/workflows/pages.yml/badge.svg)](https://github.com/AnyStackArchitect/veeam_designer/actions/workflows/pages.yml)
 
 Veeam Designer is a web-first sizing and architecture calculator for Veeam backup environments.
 It turns workload, retention, platform, and recovery requirements into infrastructure sizing,
 capacity, WAN, risk, and cost guidance.
 
-**Live calculator:** https://eblackrps.github.io/veeam_designer/
+**Live calculator:** https://anystackarchitect.github.io/veeam_designer/
 
 Current stable release: **5.0.0**
 
@@ -30,7 +30,7 @@ The same Python sizing engine is used by the browser edition, FastAPI service, C
 
 Use the browser-hosted calculator without installing anything:
 
-https://eblackrps.github.io/veeam_designer/
+https://anystackarchitect.github.io/veeam_designer/
 
 The Pages edition runs the packaged Python engine in-browser with Pyodide and supports the guided
 builder, YAML workflow, JSON/CSV export, and printable reports.
@@ -67,7 +67,7 @@ docker run --rm \
   emb079/veeam-designer:5.0.0
 ```
 
-The same release is published as `ghcr.io/eblackrps/veeam-designer:5.0.0`. The Compose file also
+The Docker workflow targets `ghcr.io/anystackarchitect/veeam-designer:5.0.0`. The Compose file also
 defaults to the stable `5.0.0` image and can be overridden with `VEEAM_DESIGNER_IMAGE`.
 
 Open `http://localhost:8000/run`.
